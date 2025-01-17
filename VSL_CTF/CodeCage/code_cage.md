@@ -26,13 +26,15 @@ CMD ["python", "app.py"]
 
 - Bây giờ sẽ tìm cách code python để đọc file `flag.txt`
 
-- Đọc sơ qua source code thì bị cấm hàm `open` nên không thể dùng hàm này để đọc file
-
-- Lên **ChatGPT** để hỏi gợi ý về cách đọc các file trong python mà không cần dùng hàm `open`
+- Đọc sơ qua source code (app.py) thì thấy bị cấm hàm các hàm này để tránh việc đọc file hoặc RCE
 
 ![image](img/2.png)
 
-- **ChatGPT** gợi ý sử dụng module `pathlib` để đọc file và trong code thì module `pathlib` được cho phép
+- Nhờ **ChatGPT** để hỏi gợi ý về cách đọc các file trong python mà không cần dùng hàm bị cấm ở trên
+
+![image](img/3.png)
+
+- **ChatGPT** gợi ý sử dụng module `pathlib` để đọc file và trong code thì module `pathlib` được cho phép (ở dòng 70 trong app.py)
 
 - Vậy nên sẽ sử dụng module `pathlib` để đọc file `flag.txt`
 
@@ -46,7 +48,7 @@ print(content)
 
 - Giải captcha và chạy code
 
-![image](img/3.png)
+![image](img/4.png)
 
 # Flag
 
